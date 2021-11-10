@@ -27,7 +27,7 @@ if [ "$git_ssh_key" != "" ]; then
   cd ..
   rm -r "$BUILD_DIR/apps"
   
-  python -m compileall ./
+
   
   find . -name '*.py' -delete
 fi
