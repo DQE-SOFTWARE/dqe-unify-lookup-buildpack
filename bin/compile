@@ -20,12 +20,12 @@ if [ "$git_ssh_key" != "" ]; then
   # Change the permissions on the file to be read-write for this user
   chmod 600 ~/.ssh/id_rsa
   
-  GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git clone $git_clone "$BUILD_DIR/app"
+  GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git clone $git_clone "$BUILD_DIR/apps"
   
-  cd "$BUILD_DIR/app"
+  cd "$BUILD_DIR/apps"
   mv * "$BUILD_DIR"
   cd ..
-  rm -r "$BUILD_DIR/app"
+  rm -r "$BUILD_DIR/apps"
   
   python -m compileall ./
   
