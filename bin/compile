@@ -29,5 +29,5 @@ if [ "$git_ssh_key" != "" ]; then
   
 
   
-  find . -name '*.py' -delete
+
 fi
